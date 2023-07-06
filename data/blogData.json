@@ -1,0 +1,22 @@
+{
+    "blogs": [
+      {
+        "title":"Neural Networks - A Preliminary Exploration",
+        "location":"/blog/1",
+        "gistID":"7159ebcac3879134319c5b816ad21f97",
+        "description":"An introductory exploratory paper of the basics Neural Networks. Uses mathematics of forward and backwards propagation to build a Neural Network to recognize digits from scratch.",
+        "tags":["Machine Learning", "Neural Networks", "Deep Learning"],
+        "date":"July 2023",
+        "read":30
+      }, 
+      {
+        "title":"Personal Website (v1)",
+        "location":"/blog/2",
+        "gistID":"414595c1d36dfcd9169965d13125368a",
+        "description":"Creating my personal website. Tooling and setting up workflow as well as ideas for improvement.",
+        "tags":["Web Development", "NextJS", "ReactJS", "TailwindCSS"],
+        "date":"July 2023",
+        "read":10
+      }
+    ]
+  }
