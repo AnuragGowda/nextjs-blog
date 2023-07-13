@@ -9,7 +9,7 @@ export default function Share({ title, location }){
     const { theme } = useTheme()
 
     return (
-        <div className="flex flex-col max-h-48 gap-5 bg-gray-50 border border-gray-300 p-3 rounded ml-1  dark:bg-[#2e2e2e] dark:border-0">
+        <div className="sticky top-10 flex flex-col max-h-48 gap-5 bg-gray-50 border border-gray-300 p-3 rounded ml-1 mt-10 dark:bg-[#2e2e2e] dark:border-0">
             <button
                 onClick={()=>window.open(`https://www.linkedin.com/sharing/share-offsite/?url=https://anuraggowda.com${location}`, "_blank")}
             >

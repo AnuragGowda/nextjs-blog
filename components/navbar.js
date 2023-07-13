@@ -23,14 +23,14 @@ export default function Navbar() {
                     </Link>
                 </div>
                 <div className="flex items-center space-x-8">
-                    <ul className="flex space-x-6">
-                        <li>
+                    <div className="flex space-x-6">
+                        <div>
                             <Link href="/portfolio" className="text-lg font-medium hover:text-gray-300" onClick={() => setMobileOpen(false)}>Portfolio</Link>
-                        </li>
-                        <li>
+                        </div>
+                        <div>
                             <Link href="/blog" className="text-lg font-medium hover:text-gray-300" onClick={() => setMobileOpen(false)}>Blog</Link>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
                     {theme == "light"?
                         <motion.button 
                             whileHover={{ scale:1.1 }}
@@ -92,14 +92,14 @@ export default function Navbar() {
                         whileInView={{ y:0 }}
                         exit={{ y:-10 }}
                     >
-                        <ul className="space-y-4">
-                            <motion.li initial={{ opacity:0, x:10 }} whileInView={{ opacity:1, x:0 }}>
+                        <div className="space-y-4">
+                            <motion.div initial={{ opacity:0, x:10 }} whileInView={{ opacity:1, x:0 }}>
                                 <Link href="/portfolio" className="font-semibold hover:text-gray-300" onClick={() => setMobileOpen(false)}>Portfolio</Link>
-                            </motion.li>
-                            <motion.li initial={{ opacity:0, x:10 }} whileInView={{ opacity:1, x:0 }} transition={{delay:0.1}}>
+                            </motion.div>
+                            <motion.div initial={{ opacity:0, x:10 }} whileInView={{ opacity:1, x:0 }} transition={{delay:0.1}}>
                                 <Link href="/blog" className="font-semibold hover:text-gray-300" onClick={() => setMobileOpen(false)}>Blog</Link>
-                            </motion.li>
-                        </ul>
+                            </motion.div>
+                        </div>
                     </motion.div>
                 </div>
             </div>

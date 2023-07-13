@@ -1,4 +1,5 @@
 import '../styles/global.css'
+import '../styles/blogstyles.css'
 import Layout from '../components/layout'
 import { ThemeProvider } from 'next-themes'
 import { HelmetProvider } from 'react-helmet-async';

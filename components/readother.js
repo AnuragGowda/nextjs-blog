@@ -2,7 +2,7 @@ import Link from "next/link"
 
 export default function ReadOther({ data }){
     return (
-        <div className="border-2 border-gray-100 rounded w-72 mr-1 mt-3 p-3 pl-1 dark:bg-[#2e2e2e] dark:border-0">
+        <div className="border-2 border-gray-100 rounded w-72 mr-1 p-3 pl-1 dark:bg-[#2e2e2e] dark:border-0">
             <div className="font-medium p-4 text-lg text-">
                 OTHER POSTS:
             </div>

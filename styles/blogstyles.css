@@ -1,0 +1,130 @@
+.katex-display {
+    @apply text-2xl py-5;
+}
+
+h1 {
+    @apply text-5xl font-bold mb-6 mt-16;
+}
+
+h1::before, h2::before, h3::before, h4::before, h5::before{
+    @apply text-blue-400 dark:text-purple-700 md:-ml-10 md:absolute;
+    content: "# ";
+}
+
+h2::before{
+    @apply md:-ml-8;
+}
+
+h3::before{
+    @apply md:-ml-7;
+}
+
+h4::before{
+    @apply md:-ml-6;
+}
+
+h5::before{
+    @apply md:-ml-5;
+}
+
+h2 {
+    @apply text-4xl font-bold mt-8 mb-2;
+}
+
+h3 {
+    @apply text-3xl font-bold mt-6 mb-2;
+}
+
+
+h4 {
+    @apply text-2xl font-bold mt-4 mb-1;
+}
+
+h5 {
+    @apply text-xl font-bold mt-4 mb-1;
+}
+
+p{
+    @apply md:-ml-6 md:ml-0 text-lg mb-6;
+}
+
+
+ol {
+    @apply mb-6 text-lg -mt-4;
+}
+
+ul {
+    @apply mb-6 text-base;
+}
+
+ul li {
+    @apply ml-5 my-2;
+}
+
+ul li::before {
+    @apply font-extrabold text-xl -ml-4 -mt-1;
+    content: "•";
+    color: grey;
+    position: absolute;
+}
+
+
+ol::after {
+    counter-reset: li;
+}
+
+ol li::before {
+    content: counter(li) ". ";
+    color: grey;
+    position: absolute;
+    margin-left: -1rem
+}
+
+
+ol li {
+    @apply ml-5 my-2;
+    counter-increment: li
+}
+
+.blog img {
+    @apply rounded md:-ml-10 md:ml-0;
+}
+
+figure {
+    @apply my-8;
+}
+
+figcaption {
+    @apply text-gray-400 md:-ml-10;
+}
+
+.title {
+    cursor: pointer;
+}
+
+.info {
+    background-color:#086DDD1A;
+    border-color: #086DDD1A;
+}
+
+.info .title {
+    color: #086DDD;
+}
+
+.example {
+    background-color:#7852EE1A;
+    border-color: #7852EE1A;
+}
+
+.example .title {
+    color: #7852EE;
+}
+
+.question {
+    background-color:#E0AC001A;
+    border-color: #E0AC001A;
+}
+
+.question .title {
+    color: #e7cb6d;
+}

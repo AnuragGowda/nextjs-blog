@@ -1,7 +1,7 @@
 {
     "blogs": [
       {
-        "title":"Neural Networks - A Preliminary Exploration",
+        "title":"Neural Networks Introduction",
         "location":"/blog/1",
         "gistID":"7159ebcac3879134319c5b816ad21f97",
         "description":"An introductory exploratory paper of the basics Neural Networks. Uses mathematics of forward and backwards propagation to build a Neural Network to recognize digits from scratch.",
