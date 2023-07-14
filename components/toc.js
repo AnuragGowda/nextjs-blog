@@ -5,14 +5,24 @@ export default function Toc(){
 
     useEffect(() => {
         tocbot.init({
-          tocSelector: '.toc',
-          contentSelector: '.blog',
-          headingSelector: 'h1, h2, h3, h4, h5, h6',
+            tocSelector: '.toc',
+            contentSelector: '.blog',
+            headingSelector: 'h1, h2, h3, h4, h5, h6',
         });
     
         return () => {
-          tocbot.destroy();
+            tocbot.destroy();
         };
+    }, [])
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            tocbot.refresh()
+        }, 200)
+
+        return () => {
+            clearTimeout(timer)
+        }
     }, [])
 
     return (

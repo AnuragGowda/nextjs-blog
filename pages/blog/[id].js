@@ -1,89 +1,18 @@
-import { useState, useEffect, createElement } from "react";
 import Share from "../../components/share";
 import NextPost from "../../components/nextpost";
 import blogData from "../../data/blogData.json"
 import { useRouter } from 'next/router'
 import { Helmet } from "react-helmet-async";
-import ReactMarkdown from 'react-markdown';
-import axios from 'axios'
-import remarkMath from 'remark-math'
-import rehypeKatex from 'rehype-katex'
-import rehypeRaw from "rehype-raw";
-import 'katex/dist/katex.min.css'
-import Blogbox from "../../components/blogbox";
-import { oneDark, oneLight } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import { useTheme } from "next-themes";
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import Toc from "../../components/toc";
+import BlogPost from "../../components/blogpost";
 
 export default function BlogPage() {
 
   const router = useRouter()
   const data = blogData.blogs[router.query.id-1]
-  const { theme } = useTheme()
-
-  const Blockquote = ({ children }) => {
-    // Custom rendering logic for blockquote
-  
-    const re = /\[!(.*)\][\+|-]? (.*)/
-  
-    const [,type,title] = children[1].props.children[0].match(re)
-  
-    return (
-      <Blogbox type={type} title={title} content={children.slice(2)} /> 
-    )
-  };
-
-  const HeadingComponent = ({ level, children }) => {
-    const headingText = children[0];
-    return createElement(`h${level}`, { id: headingText }, children);
-  }
-  
-  const components = {
-    blockquote: Blockquote,
-    h1: HeadingComponent,
-    h2: HeadingComponent,
-    h3: HeadingComponent,
-    h4: HeadingComponent,
-    h5: HeadingComponent,
-    h6: HeadingComponent,
-    code({node, inline, className, children, ...props}) {
-      const match = /language-(\w+)/.exec(className || '')
-      return !inline && match ? (
-        <SyntaxHighlighter
-          {...props}
-          children={String(children).replace(/\n$/, '')}
-          style={theme=='light'?oneLight:oneDark}
-          language={match[1]}
-          PreTag="div"
-          showLineNumbers
-        />
-      ) : (
-        <code {...props} className={className}>
-          {children}
-        </code>
-      )
-    }
-  };
-
-
-  const [markdownContent, setMarkdownContent] = useState('');
-
-  useEffect(() => {
-    const fetchMarkdown = async () => {
-      try {
-        const response = await axios.get('https://raw.githubusercontent.com/AnuragGowda/Test/main/update.md');
-        setMarkdownContent(response.data);
-      } catch (error) {
-        console.error('Error fetching Markdown file:', error);
-      }
-    };
-
-    fetchMarkdown();
-  }, []);
   
   if (!data){
-    return <>{blogData.blogs[router.query.id-1].title}</>
+    return <>loading</>
   }
 
   // Render the gist description if it exists 
@@ -126,15 +55,7 @@ export default function BlogPage() {
               </div>
             </div>
             <div className="flex justify-center">
-              <div className="blog">
-                <ReactMarkdown 
-                  className="ml-4 mr-4 md:ml-0 max-w-screen-md flex-grow"
-                  children={markdownContent}
-                  components={components}
-                  remarkPlugins={[remarkMath]}
-                  rehypePlugins={[rehypeKatex, rehypeRaw]}
-                /> 
-              </div>
+              <BlogPost />
             </div>
           </div>
 

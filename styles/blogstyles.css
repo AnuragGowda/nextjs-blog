@@ -14,10 +14,6 @@ h1 {
     @apply text-5xl font-bold mb-6 mt-16;
 }
 
-h1::before, h2::before, h3::before, h4::before, h5::before{
-    @apply text-blue-400 dark:text-purple-700 md:-ml-10 md:absolute;
-    content: "# ";
-}
 
 h2::before{
     @apply md:-ml-8;
