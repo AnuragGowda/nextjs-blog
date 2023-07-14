@@ -66,7 +66,7 @@ export default function BlogPost(){
     useEffect(() => {
       const fetchMarkdown = async () => {
         try {
-          const response = await axios.get('https://raw.githubusercontent.com/AnuragGowda/Test/main/u.md');
+          const response = await axios.get('https://raw.githubusercontent.com/AnuragGowda/Test/main/update.md');
           setMarkdownContent(response.data);
         } catch (error) {
           console.error('Error fetching Markdown file:', error);

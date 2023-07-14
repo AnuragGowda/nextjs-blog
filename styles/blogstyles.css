@@ -1,3 +1,6 @@
+
+
+
 .katex-display {
     @apply text-2xl py-5;
 }
@@ -6,46 +9,61 @@ code:not([class]) {
     @apply bg-gray-200 dark:bg-gray-700 px-1 py-0.5 rounded;
 }
 
-.toc-link.is-active-link::before {
-    @apply bg-blue-400 dark:bg-purple-600
+.toc .toc-list {
+    @apply mt-4;
+}
+
+.toc .toc-list.is-collapsible {
+    @apply mt-0;
+}
+
+.toc .toc-list.is-collapsible .toc-link.node-name--H2 {
+    @apply pl-5;
+}
+
+.toc .toc-list.is-collapsible .toc-link.node-name--H3 {
+    @apply pl-10;
+}
+
+.toc .toc-list.is-collapsible .toc-link.node-name--H4 {
+    @apply pl-14;
+}
+
+.toc .toc-list.is-collapsible .toc-link.node-name--H5 {
+    @apply pl-20;
+}
+
+.toc .toc-list-item {
+    @apply border-t border-dashed;
+}
+
+.toc .toc-link {
+    @apply flex py-2 px-1 text-gray-400;
+}
+
+.toc-link.is-active-link,.toc .toc-link:hover {
+    @apply text-blue-400 dark:text-purple-600;
 }
 
 h1 {
-    @apply text-5xl font-bold mb-6 mt-16;
-}
-
-
-h2::before{
-    @apply md:-ml-8;
-}
-
-h3::before{
-    @apply md:-ml-7;
-}
-
-h4::before{
-    @apply md:-ml-6;
-}
-
-h5::before{
-    @apply md:-ml-5;
+    @apply text-4xl font-bold mb-6 mt-16;
 }
 
 h2 {
-    @apply text-4xl font-bold mt-8 mb-2;
+    @apply text-3xl font-bold mt-8 mb-2;
 }
 
 h3 {
-    @apply text-3xl font-bold mt-6 mb-2;
+    @apply text-2xl font-bold mt-6 mb-2;
 }
 
 
 h4 {
-    @apply text-2xl font-bold mt-4 mb-1;
+    @apply text-xl font-bold mt-4 mb-1;
 }
 
 h5 {
-    @apply text-xl font-bold mt-4 mb-1;
+    @apply text-lg font-bold mt-4 mb-1;
 }
 
 p{
@@ -83,7 +101,6 @@ p{
     position: absolute;
     margin-left: -1rem
 }
-
 
 .blog ol li {
     @apply ml-5 my-2;
