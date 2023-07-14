@@ -9,7 +9,7 @@ export default function Share({ title, location }){
     const { theme } = useTheme()
 
     return (
-        <div className="sticky top-10 flex flex-col max-h-48 gap-5 bg-gray-50 border border-gray-300 p-3 rounded ml-1 mt-10 dark:bg-[#2e2e2e] dark:border-0">
+        <div className="flex gap-3">
             <button
                 onClick={()=>window.open(`https://www.linkedin.com/sharing/share-offsite/?url=https://anuraggowda.com${location}`, "_blank")}
             >
@@ -24,11 +24,6 @@ export default function Share({ title, location }){
                 onClick={()=>window.open(`https://twitter.com/intent/tweet?text=Check out this blog "${title}": https://anuraggowda.com${location}`, "_blank")}
             >
                 <FontAwesomeIcon icon={faTwitter} size="xl" color={theme=="light"?"#1DA1F2":"#94a3b8"}/>
-            </button>
-            <button 
-                onClick={()=>navigator.clipboard.writeText(`Check out this blog "${title}": https://anuraggowda.com${location}`)}
-            >
-                <FontAwesomeIcon icon={faLink} size="xl"color={theme=="light"?"gray":"#94a3b8"}/>
             </button>
         </div>
     )

@@ -46,7 +46,7 @@ export default function PortfolioPage(){
                 className="flex flex-wrap gap-5 mb-10 justify-center max-w-7xl"
             >
                 {projects.map(data =>
-                    <motion.div variants={child}>
+                    <motion.div variants={child} key={data.title}>
                         <PortfolioCard data={data}/>
                     </motion.div>
                 )}

@@ -59,14 +59,14 @@ export default function BlogPage(){
             >
                 <div className="flex flex-col gap-3">
                     {blogs1.map(blog => 
-                        <motion.div variants={child}>
+                        <motion.div variants={child} key={blog.title}>
                             <BlogCard data={blog}/>
                         </motion.div>
                     )}
                 </div>
                 <div className="flex flex-col gap-3">
                     {blogs2.map(blog => 
-                        <motion.div variants={child}>
+                        <motion.div variants={child} key={blog.title}>
                             <BlogCard data={blog}/>
                         </motion.div>
                     )}
@@ -80,7 +80,7 @@ export default function BlogPage(){
                 className="sm:hidden flex flex-col gap-3 mb-5 mt-5"
             >
                 {blogs.map(blog => 
-                    <motion.div variants={child}>
+                    <motion.div variants={child} key={blog.title}>
                         <BlogCard data={blog}/>
                     </motion.div>
                 )}

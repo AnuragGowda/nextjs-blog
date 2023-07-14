@@ -10,7 +10,7 @@ export default function BlogCard({ data }){
             <div className="flex flex-wrap mb-2">
                 {data.tags.map(
                     tag =>
-                    <div className="bg-blue-400 text-white text-sm font-bold py-0.5 px-2 rounded m-1 dark:bg-purple-700 dark:text-purple-200">
+                    <div key={tag} className="bg-blue-400 text-white text-sm font-bold py-0.5 px-2 rounded m-1 dark:bg-purple-700 dark:text-purple-200">
                         {tag}
                     </div>
                 )}

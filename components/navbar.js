@@ -12,7 +12,7 @@ export default function Navbar() {
     const { theme, setTheme } = useTheme()
 
     return (
-        <nav className="flex p-6 px-10 w-[100vw-1]">
+        <nav className="flex p-6 px-10 max-w-screen-2xl items-center mx-auto">
             <div className="hidden sm:flex justify-between w-full">
                 <div>
                     <Link href="/" className="text-4xl font-bold flex">
@@ -31,21 +31,21 @@ export default function Navbar() {
                             <Link href="/blog" className="text-lg font-medium hover:text-gray-300" onClick={() => setMobileOpen(false)}>Blog</Link>
                         </div>
                     </div>
-                    {theme == "light"?
+                    {theme == "dark"?
                         <motion.button 
                             whileHover={{ scale:1.1 }}
                             whileTap={{ scale:0.9 }}
-                            className="rounded-lg border p-1 pr-2 pl-2 bg-gray-200 " onClick={()=>setTheme('dark')}
+                            className="rounded-lg py-1.5 px-2 bg-gray-500" onClick={()=>setTheme('light')}
                         >
-                            <BiSun size={20}/>
-                        </motion.button>
+                            <BiMoon size={20}/>
+                    </motion.button>
                         :
                         <motion.button 
                             whileHover={{ scale:1.1 }}
                             whileTap={{ scale:0.9 }}
-                            className="rounded-lg border p-1 pr-2 pl-2 bg-gray-200 dark:bg-gray-500 dark:border-0" onClick={()=>setTheme('light')}
+                            className="rounded-lg py-1.5 px-2 bg-gray-200 " onClick={()=>setTheme('dark')}
                         >
-                            <BiMoon size={20}/>
+                            <BiSun size={20}/>
                         </motion.button>
                     }
                 </div>
@@ -72,14 +72,14 @@ export default function Navbar() {
                     {theme == "light"?
                             <motion.button 
                                 whileTap={{ scale:0.9 }}
-                                className="rounded-lg border p-1 pr-2 pl-2 bg-gray-200 " onClick={()=>setTheme('dark')}
+                                className="rounded-lg py-1.5 px-2 bg-gray-200 " onClick={()=>setTheme('dark')}
                             >
                                 <BiSun size={20}/>
                             </motion.button>
                             :
                             <motion.button 
                                 whileTap={{ scale:0.9 }}
-                                className="rounded-lg border p-1 pr-2 pl-2 bg-gray-200 dark:bg-gray-500 dark:border-0" onClick={()=>setTheme('light')}
+                                className="rounded-lg py-1.5 px-2 bg-gray-500" onClick={()=>setTheme('light')}
                             >
                                 <BiMoon size={20}/>
                             </motion.button>

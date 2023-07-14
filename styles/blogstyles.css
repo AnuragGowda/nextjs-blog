@@ -2,6 +2,14 @@
     @apply text-2xl py-5;
 }
 
+code:not([class]) {
+    @apply bg-gray-200 dark:bg-gray-700 px-1 py-0.5 rounded;
+}
+
+.toc-link.is-active-link::before {
+    @apply bg-blue-400 dark:bg-purple-600
+}
+
 h1 {
     @apply text-5xl font-bold mb-6 mt-16;
 }
@@ -49,19 +57,19 @@ p{
 }
 
 
-ol {
+.blog ol {
     @apply mb-6 text-lg -mt-4;
 }
 
-ul {
+.blog ul {
     @apply mb-6 text-base;
 }
 
-ul li {
+.blog ul li {
     @apply ml-5 my-2;
 }
 
-ul li::before {
+.blog ul li::before {
     @apply font-extrabold text-xl -ml-4 -mt-1;
     content: "•";
     color: grey;
@@ -69,11 +77,11 @@ ul li::before {
 }
 
 
-ol::after {
+.blog ol::after {
     counter-reset: li;
 }
 
-ol li::before {
+.blog ol li::before {
     content: counter(li) ". ";
     color: grey;
     position: absolute;
@@ -81,7 +89,7 @@ ol li::before {
 }
 
 
-ol li {
+.blog ol li {
     @apply ml-5 my-2;
     counter-increment: li
 }
@@ -127,4 +135,31 @@ figcaption {
 
 .question .title {
     color: #e7cb6d;
+}
+
+.success {
+    background-color:#08b94e1a;
+    border-color: #08b94e1a;
+}
+
+.success .title {
+    color: #08b94e;
+}
+
+.tip {
+    background-color:#00bfbc1a;
+    border-color: #00bfbc1a;
+}
+
+.tip .title {
+    color: #00bfbc;
+}
+
+.warning {
+    background-color:#ec75001a;
+    border-color: #ec75001a;
+}
+
+.warning .title {
+    color: #ec7500;
 }

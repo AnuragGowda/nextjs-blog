@@ -7,7 +7,7 @@ import { HelmetProvider } from 'react-helmet-async';
 export default function App({ Component, pageProps }) {
   return (
     <HelmetProvider>
-      <ThemeProvider attribute="class">
+      <ThemeProvider attribute="class" defaultTheme="light">
         <Layout title="agowda">
           <Component {...pageProps} />
         </Layout>
