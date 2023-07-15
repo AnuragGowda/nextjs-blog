@@ -2,14 +2,12 @@ import { faArrowLeft, faArrowRight, faChevronLeft, faChevronRight } from "@forta
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import data from "../data/data.json"
 
-export default function NextPost({prev, id}){
-
-    const blogData = data[id-1]
+export default function NextPost({prev, blogData}){
 
     return (
         <>
-            {id &&
-                <div className="flex py-5 md:gap-6">
+            {blogData &&
+                <div className="flex py-5 md:gap-6" onClick={()=>window.open(blogData.location, '_self')}>
                     { prev &&
                         <>
                             <FontAwesomeIcon className="hidden md:block text-blue-400 dark:text-purple-600 mt-7 w-2xl" icon={faChevronLeft} size="2xl"/>
@@ -23,10 +21,10 @@ export default function NextPost({prev, id}){
                             {`${prev?'Previous':'Next'}`} Post 
                         </div>
                         <div className="hidden md:block font-bold text-lg">
-                            {id}
+                            {blogData.title}
                         </div>
                         <div className="hidden md:block max-w-xs">
-                            {id}
+                            {blogData.description}
                         </div>
                     </div>
                     { !prev &&

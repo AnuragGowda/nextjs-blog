@@ -10,11 +10,7 @@ import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Comments from "../../components/comments";
 
-export default function BlogPage() {
-
-  const router = useRouter()
-  const blogData = data.blogs[router.query.id-1]
-  
+export default function BlogPage({ blogData }) {
 
   // Render the gist description if it exists 
   return (
@@ -63,8 +59,8 @@ export default function BlogPage() {
             <BlogPost path={blogData.markdownLocation}/>
           </div>
           <div className="border-y mt-20 flex justify-center gap-20">
-              <NextPost prev={true} id={blogData.prev}/>
-              <NextPost prev={false} id={blogData.next}/>
+              <NextPost prev={true} blogData={blogData.prev}/>
+              <NextPost prev={false} blogData={blogData.next}/>
           </div> 
           <div className="mt-32">
             <Comments />
@@ -82,3 +78,15 @@ export default function BlogPage() {
   );
 }
 
+export async function getServerSideProps(context) {
+  // Fetch the data from the imported JSON file
+  const {query} = context
+  const blogData = data.blogs[query.id-1];
+
+  // Pass the data as props to the page component
+  return {
+    props: {
+      blogData,
+    },
+  };
+}

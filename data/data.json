@@ -17,7 +17,11 @@
         "tags":["Machine Learning", "Neural Networks", "Deep Learning"],
         "date":"July 2023",
         "read":5,
-        "next":3,
+        "next":{
+          "title":"The 'Hello World' of Neural Networks",
+          "location":"/blog/3",
+          "description":"Problem Statement and data setup with preliminary coding."
+        },
         "prev":null
       }, 
       {
@@ -28,8 +32,16 @@
         "tags":["Machine Learning", "Neural Networks", "Deep Learning"],
         "date":"July 2023",
         "read":5,
-        "next":4,
-        "prev":2
+        "next":{
+          "title":"Forward Propogation",
+          "location":"/blog/4",
+          "description":"Exploring how Neural Networks make predictions. Coding and math behind forward propogation."
+        },
+        "prev":{
+          "title":"Neural Networks Introduction",
+          "location":"/blog/2",
+          "description":"Basics of Neural Networks. Usage and Definitions."
+        }
       }, 
       {
         "title":"Forward Propogation",
@@ -40,7 +52,11 @@
         "date":"July 2023",
         "read":5,
         "next":null,
-        "prev":3
+        "prev":{
+          "title":"The 'Hello World' of Neural Networks",
+          "location":"/blog/3",
+          "description":"Problem Statement and data setup with preliminary coding."
+        }
       }
     ],
     "projects":[
