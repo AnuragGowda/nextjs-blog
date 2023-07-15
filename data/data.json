@@ -1,0 +1,80 @@
+{
+    "blogs": [
+      {
+        "title":"Personal Website (v1)",
+        "location":"/blog/1",
+        "gistID":"414595c1d36dfcd9169965d13125368a",
+        "description":"Creating my personal website. Tooling and setting up workflow as well as ideas for improvement.",
+        "tags":["Web Development", "NextJS", "ReactJS", "TailwindCSS"],
+        "date":"July 2023",
+        "read":10
+      },
+      {
+        "title":"Neural Networks Introduction",
+        "location":"/blog/2",
+        "markdownLocation":"6. Career/NN Basic/1. Introduction to Neural Networks.md",
+        "description":"Basics of Neural Networks. Usage and Definitions.",
+        "tags":["Machine Learning", "Neural Networks", "Deep Learning"],
+        "date":"July 2023",
+        "read":5,
+        "next":3,
+        "prev":null
+      }, 
+      {
+        "title":"The 'Hello World' of Neural Networks",
+        "location":"/blog/3",
+        "markdownLocation":"6. Career/NN Basic/2. The 'Hello World' of Neural Networks.md",
+        "description":"Problem Statement and data setup with preliminary coding.",
+        "tags":["Machine Learning", "Neural Networks", "Deep Learning"],
+        "date":"July 2023",
+        "read":5,
+        "next":4,
+        "prev":2
+      }, 
+      {
+        "title":"Forward Propogation",
+        "location":"/blog/4",
+        "markdownLocation":"6. Career/NN Basic/3. Forward Propagation.md",
+        "description":"Exploring how Neural Networks make predictions. Coding and math behind forward propogation.",
+        "tags":["Machine Learning", "Neural Networks", "Deep Learning"],
+        "date":"July 2023",
+        "read":5,
+        "next":null,
+        "prev":3
+      }
+    ],
+    "projects":[
+      {
+          "title":"Pollster",
+          "image":"pollster.png",
+          "tags":["Web", "ReactJS", "ChakraUI", "Firebase", "PWA"],
+          "description":"A location based polling app built in 36 under hours with Tinu Vanampula and Linkai Wu for MocoHacks2021, won topical prize for Best Overall UI.",
+          "githubLink":"https://github.com/tinuh/pollster",
+          "link":"https://pollster.tinu.tech/"
+      },
+      {
+          "title":"PinkIt",
+          "image":"pinkit.png",
+          "tags":["Web", "ReactJS", "MUI", "Firebase", "PWA"],
+          "description":"A POC for a video based shopping app, designed with Katie Yang and Rosemary Yang. Winner of Chemours Topical Prize + Semifinalist in the Diamond Challenge 2021.",
+          "githubLink":"none",
+          "link":"https://drive.google.com/file/d/1gqr_fXGXxj-HeeQj2BAG5xJZbeIv703a/view?usp=sharing"
+      },
+      {
+          "title":"IB EE Research Paper",
+          "image":"ee.png",
+          "tags":["PyGame", "Graph Theory", "Algorithms"],
+          "description":"My final year research paper as part of the IB program: \"How does theory (big O space and time complexity) for A* and Greedy Best-first search compare with actual runtime and memory use?\" Received an 'A' grade, written 2021.",
+          "githubLink":"https://github.com/AnuragGowda/Extended-Essay",
+          "link":"https://www.overleaf.com/read/bmwssjjwbstg"
+      },
+      {
+          "title":"MyMCPS++",
+          "image":"mymcpsplus.png",
+          "tags":["Web", "jQuery", "Bootstrap"],
+          "description":"Third party substitute app for MCPS Portal. Unsupported after 2019 when MCPS switched to StudentVUE.",
+          "githubLink":"https://github.com/AnuragGowda/MyMCPS_Plus",
+          "link":"none"
+      }
+  ]
+  }

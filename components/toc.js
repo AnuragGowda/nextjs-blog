@@ -20,7 +20,7 @@ export default function Toc(){
     useEffect(() => {
         const timer = setTimeout(() => {
             tocbot.refresh()
-        }, 200)
+        }, 300)
 
         return () => {
             clearTimeout(timer)

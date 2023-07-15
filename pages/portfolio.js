@@ -1,10 +1,10 @@
-import portfolioData from "../data/portfolioData.json"
+import data from "../data/data.json"
 import PortfolioCard from "../components/portfoliocard";
 import { motion } from "framer-motion";
 
 export default function PortfolioPage(){
 
-    const projects = portfolioData.projects
+    const projects = data.projects
 
     const parent = {
         visible: {

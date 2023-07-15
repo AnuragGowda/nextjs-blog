@@ -1,6 +1,6 @@
 import { useState, useEffect, createElement } from "react";
 
-import axios from 'axios'
+import { Octokit } from "@octokit/rest";
 
 import Blogbox from "./blogbox";
 import ReactMarkdown from 'react-markdown';
@@ -13,7 +13,7 @@ import oneDark from 'react-syntax-highlighter/dist/cjs/styles/prism/one-dark'
 import oneLight from 'react-syntax-highlighter/dist/cjs/styles/prism/one-light'
 import 'katex/dist/katex.min.css'
 
-export default function BlogPost(){
+export default function BlogPost({path}){
     const { theme } = useTheme()
 
     const Blockquote = ({ children }) => {
@@ -64,17 +64,26 @@ export default function BlogPost(){
     const [markdownContent, setMarkdownContent] = useState('');
 
     useEffect(() => {
-      const fetchMarkdown = async () => {
-        try {
-          const response = await axios.get('https://raw.githubusercontent.com/AnuragGowda/Test/main/update.md');
-          setMarkdownContent(response.data);
-        } catch (error) {
-          console.error('Error fetching Markdown file:', error);
-        }
-      };
-  
-      fetchMarkdown();
-    }, []);
+        const octokit = new Octokit({
+            auth: process.env.NEXT_PUBLIC_API,
+        });
+        
+        octokit.request('GET /repos/{owner}/{repo}/contents/{path}', {
+            owner: 'AnuragGowda',
+            repo: 'Obsidian',
+            path: path,
+            headers: {
+                'X-GitHub-Api-Version': '2022-11-28'
+                }
+        })
+        .then((response) => {
+            const content = Buffer.from(response.data.content, 'base64').toString('utf-8');
+            setMarkdownContent(content);
+        })
+        .catch((error) => {
+            console.error('Error fetching file:', error);
+        })
+      }, []);
 
     return (
         <div className="blog">

@@ -1,4 +1,4 @@
-import blogData from "../data/blogData.json"
+import data from "../data/data.json"
 import BlogCard from "../components/blogcard"
 import { motion } from "framer-motion"
 
@@ -15,7 +15,7 @@ function splitArr(array) {
 
 export default function BlogPage(){
     
-    const blogs = blogData.blogs
+    const blogs = data.blogs
     const [blogs1, blogs2] = splitArr(blogs)
 
     const parent = {
