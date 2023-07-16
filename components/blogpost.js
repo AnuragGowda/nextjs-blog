@@ -66,7 +66,7 @@ export default function BlogPost({path}){
 
     useEffect(() => {
         const octokit = new Octokit({
-            auth: process.env.NEXT_PUBLIC_API,
+            auth: process.env.API,
         });
         
         octokit.request('GET /repos/{owner}/{repo}/contents/{path}', {
