@@ -47,6 +47,7 @@ export default function BlogPost({path}){
             return !inline && match ? (
             <SyntaxHighlighter
                 {...props}
+                className="code-block"
                 children={String(children).replace(/\n$/, '')}
                 style={theme=="light"?oneLight:oneDark}
                 language={match[1]}
@@ -86,9 +87,8 @@ export default function BlogPost({path}){
       }, []);
 
     return (
-        <div className="blog">
-            <ReactMarkdown 
-                className="ml-4 mr-4 md:ml-0 max-w-screen-md flex-grow"
+        <div className="blog max-w-3xl mx-3">
+            <ReactMarkdown
                 children={markdownContent}
                 components={components}
                 remarkPlugins={[remarkMath]}

@@ -2,6 +2,21 @@
     @apply text-2xl py-5;
 }
 
+@media (min-width: 420px) {
+    .share-show {
+        display: block;
+    }
+}
+
+.katex-display {
+    @apply w-[85vw] lg:w-full;
+    overflow-x: auto;
+}
+
+.code-block {
+    @apply w-[85vw] lg:w-full; /* Adjust the maximum width as needed */
+}
+
 code:not([class]) {
     @apply bg-gray-200 dark:bg-gray-700 px-1 py-0.5 rounded;
 }
@@ -39,7 +54,7 @@ code:not([class]) {
 }
 
 .toc-link.is-active-link,.toc .toc-link:hover {
-    @apply text-blue-400 dark:text-purple-600 font-medium;
+    @apply text-blue-400 dark:text-purple-400 font-medium;
 }
 
 h1 {
@@ -126,6 +141,15 @@ figcaption {
 }
 
 .info .title {
+    color: #086DDD;
+}
+
+.note {
+    background-color:#086DDD1A;
+    border-color: #086DDD1A;
+}
+
+.note .title {
     color: #086DDD;
 }
 

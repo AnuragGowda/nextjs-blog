@@ -2,21 +2,25 @@
     "blogs": [
       {
         "title":"Personal Website (v1)",
+        "img":"/images/blog.png",
         "location":"/blog/1",
-        "gistID":"414595c1d36dfcd9169965d13125368a",
+        "markdownLocation":"6. Blogs/Personal Website.md",
+        "folder":"Web",
         "description":"Creating my personal website. Tooling and setting up workflow as well as ideas for improvement.",
-        "tags":["Web Development", "NextJS", "ReactJS", "TailwindCSS"],
+        "tags":["ReactJS", "NextJS", "TailwindCSS", "Vercel"],
         "date":"July 2023",
         "read":10
       },
       {
         "title":"Neural Networks Introduction",
+        "img":"/images/NN1.png",
         "location":"/blog/2",
-        "markdownLocation":"6. Career/NN Basic/1. Introduction to Neural Networks.md",
+        "markdownLocation":"6. Blogs/NN Basic/1. Introduction to Neural Networks.md",
+        "folder":"Machine Learning",
         "description":"Basics of Neural Networks. Usage and Definitions.",
-        "tags":["Machine Learning", "Neural Networks", "Deep Learning"],
+        "tags":["Neuron", "ReLU", "Math", "NN Layers"],
         "date":"July 2023",
-        "read":5,
+        "read":4,
         "next":{
           "title":"The 'Hello World' of Neural Networks",
           "location":"/blog/3",
@@ -26,10 +30,12 @@
       }, 
       {
         "title":"The 'Hello World' of Neural Networks",
+        "img":"/images/NN2.png",
         "location":"/blog/3",
-        "markdownLocation":"6. Career/NN Basic/2. The 'Hello World' of Neural Networks.md",
+        "markdownLocation":"6. Blogs/NN Basic/2. The 'Hello World' of Neural Networks.md",
+        "folder":"Machine Learning",
         "description":"Problem Statement and data setup with preliminary coding.",
-        "tags":["Machine Learning", "Neural Networks", "Deep Learning"],
+        "tags":["MNIST", "Computer Vision", "Encoding", "NumPy"],
         "date":"July 2023",
         "read":5,
         "next":{
@@ -45,12 +51,14 @@
       }, 
       {
         "title":"Forward Propogation",
+        "img":"/images/NN3.png",
         "location":"/blog/4",
-        "markdownLocation":"6. Career/NN Basic/3. Forward Propagation.md",
+        "markdownLocation":"6. Blogs/NN Basic/3. Forward Propagation.md",
+        "folder":"Machine Learning",
         "description":"Exploring how Neural Networks make predictions. Coding and math behind forward propogation.",
-        "tags":["Machine Learning", "Neural Networks", "Deep Learning"],
+        "tags":["Forward Propogation", "Softmax", "Math", "NumPy", "Vectorization"],
         "date":"July 2023",
-        "read":5,
+        "read":8,
         "next":null,
         "prev":{
           "title":"The 'Hello World' of Neural Networks",

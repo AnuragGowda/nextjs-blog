@@ -9,7 +9,7 @@ import { motion } from 'framer-motion'
 export default function Navbar() {
 
     const [mobileOpen, setMobileOpen] = useState(false)
-    const { theme, setTheme } = useTheme()
+    const { resolvedTheme, setTheme } = useTheme()
 
     return (
         <nav className="flex p-6 px-10 max-w-screen-2xl items-center mx-auto">
@@ -31,23 +31,15 @@ export default function Navbar() {
                             <Link href="/blog" className="text-lg font-medium hover:text-gray-300" onClick={() => setMobileOpen(false)}>Blog</Link>
                         </div>
                     </div>
-                    {theme == "dark"?
-                        <motion.button 
-                            whileHover={{ scale:1.1 }}
-                            whileTap={{ scale:0.9 }}
-                            className="rounded-lg py-1.5 px-2 bg-gray-500" onClick={()=>setTheme('light')}
-                        >
-                            <BiMoon size={20}/>
+
+                    <motion.button 
+                        whileHover={{ scale:1.1 }}
+                        whileTap={{ scale:0.9 }}
+                        className="rounded-lg py-1.5 px-2 bg-gray-200 dark:bg-gray-500" onClick={()=>setTheme(resolvedTheme=='light'?'dark':'light')}
+                    >
+                        {resolvedTheme == "light"? <BiSun size={20}/>: <BiMoon size={20}/>}
                     </motion.button>
-                        :
-                        <motion.button 
-                            whileHover={{ scale:1.1 }}
-                            whileTap={{ scale:0.9 }}
-                            className="rounded-lg py-1.5 px-2 bg-gray-200 " onClick={()=>setTheme('dark')}
-                        >
-                            <BiSun size={20}/>
-                        </motion.button>
-                    }
+
                 </div>
             </div>
             <div className="sm:hidden flex flex-col w-full">
@@ -69,25 +61,16 @@ export default function Navbar() {
                             agowda
                         </Link>
                     </div>
-                    {theme == "light"?
-                            <motion.button 
-                                whileTap={{ scale:0.9 }}
-                                className="rounded-lg py-1.5 px-2 bg-gray-200 " onClick={()=>setTheme('dark')}
-                            >
-                                <BiSun size={20}/>
-                            </motion.button>
-                            :
-                            <motion.button 
-                                whileTap={{ scale:0.9 }}
-                                className="rounded-lg py-1.5 px-2 bg-gray-500" onClick={()=>setTheme('light')}
-                            >
-                                <BiMoon size={20}/>
-                            </motion.button>
-                        }
+                    <motion.button 
+                        whileTap={{ scale:0.9 }}
+                        className="rounded-lg py-1.5 px-2 bg-gray-200 dark:bg-gray-500" onClick={()=>setTheme(resolvedTheme=='light'?'dark':'light')}
+                    >
+                        {resolvedTheme == "light"? <BiSun size={20}/>: <BiMoon size={20}/>}
+                    </motion.button>
                 </div>
                 <div className={`md:hidden ${mobileOpen ? 'block' : 'hidden'}`}>
                     <motion.div 
-                        className="absolute px-4 pt-2 pb-3 mt-5 bg-[#2e2e2e] w-[calc(100vw-20vw)] rounded-b-lg"
+                        className="absolute mx-auto px-4 pt-2 pb-3 mt-5 bg-gray-200 dark:bg-[#2e2e2e] w-[calc(100vw-20vw)] rounded-b-lg border-b-2 border-x-2 border-gray-300"
                         initial={{ y:-10 }}
                         whileInView={{ y:0 }}
                         exit={{ y:-10 }}

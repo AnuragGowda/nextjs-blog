@@ -47,6 +47,16 @@ export default function HomePage() {
   const ln = "Gowda"
 
   return (
+    <>
+    <Helmet>
+      <title>agowda</title>
+      <meta name='og:title' content="Home Page"/>
+      <meta name='og:description' content="Anurag Gowda's personal website"/>
+      <meta name='og:image' content="https://anuraggowda.com/images/blog.png"/>
+      <meta name='og:url' content="https://anuraggowda.com/images/"/>
+      <meta name='og:type' content="website"/>
+    </Helmet>
+  
     <div className="flex h-[calc(100vh-20vh)] items-center justify-center">
       <div className="flex flex-col gap-1 ml-10 mr-10">
         <div className="font-medium text-xl">
@@ -129,5 +139,6 @@ export default function HomePage() {
 
       </div>
     </div>
+    </>
   )
 }

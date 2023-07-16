@@ -1,4 +1,4 @@
-import { faCaretDown, faCaretRight, faCircleInfo, faBars, faCircleQuestion, faCheck, faWarning, faFire } from "@fortawesome/free-solid-svg-icons"
+import { faCaretDown, faCaretRight, faCircleInfo, faBars, faCircleQuestion, faCheck, faWarning, faFire, faPencil } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { useState } from "react"
 
@@ -12,7 +12,8 @@ export default function Blogbox({type, title, content}){
         ["question", faCircleQuestion],
         ["success", faCheck],
         ["warning", faWarning],
-        ["tip", faFire]
+        ["tip", faFire],
+        ["note", faPencil]
     ])
 
     return (
