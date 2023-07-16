@@ -21,7 +21,7 @@ export default function BlogPage({ blogData }) {
         <meta name='og:title' content={blogData.title}/>
         <meta name='og:description' content={blogData.description}/>
         <meta name='og:image' content={"https://anuraggowda.com"+blogData.img}/>
-        <meta name='og:url' content={"https://anuraggowda.com/"+blogData.location}/>
+        <meta name='og:url' content={"https://anuraggowda.com"+blogData.location}/>
         <meta name='og:type' content="website"/>
         <meta name="twitter:card" content={"https://anuraggowda.com"+blogData.img} />
         <meta name="twitter:title" content={blogData.title} />

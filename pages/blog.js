@@ -34,7 +34,7 @@ export default function BlogPage(){
       b = b.filter(obj => obj.tags.includes(sp.get("tag")))
     }
     const [query, setQuery] = useState('')
-    const blogs = b.filter(obj => obj.title.toLowerCase().includes(query))
+    const blogs = b.filter(obj => obj.title.toLowerCase().includes(query.toLowerCase()))
     const [blogs1, blogs2] = splitArr(blogs)
 
     const parent = {
