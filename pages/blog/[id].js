@@ -20,13 +20,13 @@ export default function BlogPage({ blogData }) {
         <title>{blogData.title}</title>
         <meta name='og:title' content={blogData.title}/>
         <meta name='og:description' content={blogData.description}/>
-        <meta name='og:image' content={"https://anuraggowda.com/images/"+blogData.img}/>
+        <meta name='og:image' content={"https://anuraggowda.com"+blogData.img}/>
         <meta name='og:url' content={"https://anuraggowda.com/"+blogData.location}/>
         <meta name='og:type' content="website"/>
-        <meta name="twitter:card" content={"https://anuraggowda.com/images/"+blogData.img} />
+        <meta name="twitter:card" content={"https://anuraggowda.com"+blogData.img} />
         <meta name="twitter:title" content={blogData.title} />
         <meta name="twitter:description" content={blogData.description} />
-        <meta name="twitter:image" content={"https://anuraggowda.com/images/"+blogData.img} />
+        <meta name="twitter:image" content={"https://anuraggowda.com"+blogData.img} />
       </Head>
       <div className="flex h-[fit-content] justify-center mt-2 bg-[#f9fafb] dark:bg-[#1e1e1e] pb-10">
 
