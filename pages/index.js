@@ -2,6 +2,7 @@ import { faGithub, faLinkedin, faInstagram } from "@fortawesome/free-brands-svg-
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { motion } from "framer-motion"
+import Head from "next/head"
 
 export default function HomePage() {
   const parent = {
@@ -48,14 +49,14 @@ export default function HomePage() {
 
   return (
     <>
-    <Helmet>
+    <Head>
       <title>agowda</title>
       <meta name='og:title' content="Home Page"/>
       <meta name='og:description' content="Anurag Gowda's personal website"/>
       <meta name='og:image' content="https://anuraggowda.com/images/blog.png"/>
       <meta name='og:url' content="https://anuraggowda.com/images/"/>
       <meta name='og:type' content="website"/>
-    </Helmet>
+    </Head>
   
     <div className="flex h-[calc(100vh-20vh)] items-center justify-center">
       <div className="flex flex-col gap-1 ml-10 mr-10">

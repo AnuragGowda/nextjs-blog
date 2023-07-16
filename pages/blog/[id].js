@@ -1,7 +1,7 @@
 import Share from "../../components/share"
 import NextPost from "../../components/nextpost"
 import data from "../../data/data.json"
-import { Helmet } from "react-helmet"
+import Head from "next/head"
 import Toc from "../../components/toc"
 import BlogPost from "../../components/blogpost"
 import { faClock, faFolder } from "@fortawesome/free-regular-svg-icons"
@@ -16,7 +16,7 @@ export default function BlogPage({ blogData }) {
   // Render the gist description if it exists 
   return (
     <>
-      <Helmet>
+      <Head>
         <title>{blogData.title}</title>
         <meta name='og:title' content={blogData.title}/>
         <meta name='og:description' content={blogData.description}/>
@@ -27,7 +27,7 @@ export default function BlogPage({ blogData }) {
         <meta name="twitter:title" content={blogData.title} />
         <meta name="twitter:description" content={blogData.description} />
         <meta name="twitter:image" content={"https://anuraggowda.com/images/"+blogData.img} />
-      </Helmet>
+      </Head>
       <div className="flex h-[fit-content] justify-center mt-2 bg-[#f9fafb] dark:bg-[#1e1e1e] pb-10">
 
         <div className="flex flex-col mt-16 w-[fit-content] border p-3 mx-3 md:p-14 rounded-lg bg-white dark:bg-[#2e2e2e] dark:border-[#2e2e2e]">
