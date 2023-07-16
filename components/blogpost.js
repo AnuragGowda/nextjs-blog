@@ -64,11 +64,9 @@ export default function BlogPost({path}){
 
     const [markdownContent, setMarkdownContent] = useState('');
 
-    console.log(process.env.NEXT_PUBLIC_API)
-
     useEffect(() => {
         const octokit = new Octokit({
-            auth: process.env.API,
+            auth: process.env.NEXT_PUBLIC_API,
         });
         
         octokit.request('GET /repos/{owner}/{repo}/contents/{path}', {
