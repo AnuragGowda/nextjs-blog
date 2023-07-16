@@ -1,7 +1,7 @@
 import Share from "../../components/share"
 import NextPost from "../../components/nextpost"
 import data from "../../data/data.json"
-import { Helmet } from "react-helmet-async"
+import { Helmet } from "react-helmet"
 import Toc from "../../components/toc"
 import BlogPost from "../../components/blogpost"
 import { faClock, faFolder } from "@fortawesome/free-regular-svg-icons"
