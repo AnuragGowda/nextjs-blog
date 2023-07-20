@@ -77,14 +77,35 @@
         "description":"Looking into the Backpropagation Cost Function. Usage and Definition.",
         "markdownLocation":"6. Blogs/NN Basic/4. Backward Propagation - Cost Function.md",
         "folder":"Machine Learning",
-        "tags":["Backpropogation", "Multi-class Cross Entropy Loss", "Math"],
+        "tags":["Backpropogation", "Multi-class Cross Entropy Loss", "Math", "Error"],
         "date":"July 2023",
         "read":8,
-        "next":null,
+        "next":{
+          "title":"Backward Proagation - Computation",
+          "location":"/blog/6",
+          "description":"Looking into calculating change for weights and biases using the cost function."
+        },
         "prev":{
           "title":"Forward Propogation",
           "location":"/blog/4",
           "description":"Exploring how Neural Networks make predictions. Coding and math behind forward propogation."
+        }
+      },
+      {
+        "title":"Backward Proagation - Computation",
+        "location":"/blog/6",
+        "img":"/images/NN4.png",
+        "description":"Looking into calculating change for weights and biases using the cost function.",
+        "markdownLocation":"6. Blogs/NN Basic/5. Backward Propagation - Computation.md",
+        "folder":"Machine Learning",
+        "tags":["Backpropogation", "Partial Derivative", "Linear Algebra", "Loss"],
+        "date":"July 2023",
+        "read":8,
+        "next":null,
+        "prev":{
+          "title":"Backward Proagation - Cost Function",
+          "location":"/blog/5",
+          "description":"Looking into the Backpropagation Cost Function. Usage and Definition."
         }
       }
     ],
