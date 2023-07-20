@@ -94,7 +94,7 @@
       {
         "title":"Backward Proagation - Computation",
         "location":"/blog/6",
-        "img":"/images/NN4.png",
+        "img":"/images/NN5.png",
         "description":"Looking into calculating change for weights and biases using the cost function.",
         "markdownLocation":"6. Blogs/NN Basic/5. Backward Propagation - Computation.md",
         "folder":"Machine Learning",
