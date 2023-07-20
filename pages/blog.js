@@ -19,9 +19,6 @@ function splitArr(array) {
       [[], []]
     );
   }
-  
-
-
 
 export default function BlogPage(){
     

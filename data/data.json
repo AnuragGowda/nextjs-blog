@@ -59,11 +59,32 @@
         "tags":["Forward Propogation", "Softmax", "Math", "NumPy", "Vectorization"],
         "date":"July 2023",
         "read":8,
-        "next":null,
+        "next":{
+          "title":"Backward Proagation - Cost Function",
+          "location":"/blog/5",
+          "description":"Looking into the Backpropagation Cost Function. Usage and Definition."
+        },
         "prev":{
           "title":"The 'Hello World' of Neural Networks",
           "location":"/blog/3",
           "description":"Problem Statement and data setup with preliminary coding."
+        }
+      },
+      {
+        "title":"Backward Proagation - Cost Function",
+        "location":"/blog/5",
+        "img":"/images/NN4.png",
+        "description":"Looking into the Backpropagation Cost Function. Usage and Definition.",
+        "markdownLocation":"6. Blogs/NN Basic/4. Backward Propagation - Cost Function.md",
+        "folder":"Machine Learning",
+        "tags":["Backpropogation", "Multi-class Cross Entropy Loss", "Math"],
+        "date":"July 2023",
+        "read":8,
+        "next":null,
+        "prev":{
+          "title":"Forward Propogation",
+          "location":"/blog/4",
+          "description":"Exploring how Neural Networks make predictions. Coding and math behind forward propogation."
         }
       }
     ],
