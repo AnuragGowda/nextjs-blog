@@ -10,8 +10,12 @@ import Comments from "../../components/comments"
 import Tags from "../../components/tags"
 import Breadcrumbs from "../../components/breadcrubs"
 import { motion } from 'framer-motion'
+import { useState } from "react"
+
 
 export default function BlogPage({ blogData }) {
+
+  const [reset, setReset] = useState(null)
 
   // Render the gist description if it exists 
   return (
@@ -59,9 +63,9 @@ export default function BlogPage({ blogData }) {
           </div>
           <div className="flex flex-wrap my-3 ml-3 md:ml-0">
             <Tags tags={blogData.tags} />
-          </div>
+          </div> 
           <div className="flex justify-center border-t mt-3">
-            <BlogPost path={blogData.markdownLocation}/>
+            <BlogPost reset={reset} path={blogData.markdownLocation}/>
           </div>
           <div className="border-y mt-20 flex justify-center gap-20">
               <NextPost prev={true} blogData={blogData.prev}/>
@@ -74,7 +78,7 @@ export default function BlogPage({ blogData }) {
 
         <div className="hidden lg:block mt-16 ml-5">
           <div className="sticky top-40">
-            <Toc />
+            <Toc setReset={setReset}/>
           </div>
         </div>
 

@@ -34,6 +34,8 @@ export default function BlogPage(){
     const blogs = b.filter(obj => obj.title.toLowerCase().includes(query.toLowerCase()))
     const [blogs1, blogs2] = splitArr(blogs)
 
+    const [showLoader, setShowLoader] = useState(false)
+
     const parent = {
         visible: {
           opacity: 1,
@@ -59,6 +61,8 @@ export default function BlogPage(){
       }
 
     return (
+      <>
+        {showLoader && <Loading />}
         <div className="flex flex-col items-center bg-[#f9fafb] dark:bg-[#1e1e1e] pb-5">
             <div className="font-bold text-5xl mt-10">
                 Blog
@@ -107,14 +111,14 @@ export default function BlogPage(){
                     <div className="flex flex-col gap-7">
                         {blogs1.map(blog => 
                             <motion.div variants={child} key={blog.title}>
-                                <BlogCard data={blog}/>
+                                <BlogCard data={blog} />
                             </motion.div>
                         )}
                     </div>
                     <div className="flex flex-col gap-7">
                         {blogs2.map(blog => 
                             <motion.div variants={child} key={blog.title}>
-                                <BlogCard data={blog}/>
+                                <BlogCard data={blog} />
                             </motion.div>
                         )}
                     </div>
@@ -139,11 +143,12 @@ export default function BlogPage(){
               >
                   {blogs.map(blog => 
                       <motion.div variants={child} key={blog.title}>
-                          <BlogCard data={blog}/>
+                          <BlogCard data={blog} />
                       </motion.div>
                   )}
               </motion.div>
             }
         </div>
+      </>
     )
 }

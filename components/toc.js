@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { AiOutlineBars } from "react-icons/ai"
 import { faRefresh } from "@fortawesome/free-solid-svg-icons";
 
-export default function Toc(){
+export default function Toc({ setReset }){
 
     useEffect(() => {
         tocbot.init({
@@ -12,6 +12,8 @@ export default function Toc(){
             contentSelector: '.blog',
             headingSelector: 'h1, h2, h3, h4, h5, h6',
         });
+
+        setReset(()=>tocbot)
     
         return () => {
             tocbot.destroy();
@@ -21,10 +23,20 @@ export default function Toc(){
     useEffect(() => {
         const timer = setTimeout(() => {
             tocbot.refresh()
-        }, 300)
+        }, 500)
 
         return () => {
             clearTimeout(timer)
+        }
+    }, [])
+
+    useEffect(() => {
+        const timer2 = setTimeout(() => {
+            tocbot.refresh()
+        }, 1000)
+    
+        return () => {
+            clearTimeout(timer2)
         }
     }, [])
 

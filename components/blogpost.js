@@ -13,8 +13,15 @@ import oneDark from 'react-syntax-highlighter/dist/cjs/styles/prism/one-dark'
 import oneLight from 'react-syntax-highlighter/dist/cjs/styles/prism/one-light'
 import 'katex/dist/katex.min.css'
 
-export default function BlogPost({path}){
+export default function BlogPost({path, reset}){
     const { theme } = useTheme()
+
+    useEffect(()=>{
+        console.log(reset)
+        if (reset!=null){
+            reset.refresh()
+        }
+    }, [reset])
 
     const Blockquote = ({ children }) => {
 

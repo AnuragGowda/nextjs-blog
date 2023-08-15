@@ -21,7 +21,7 @@ export default function FolderFilterCard({ collapsed }){
             <div className={`flex flex-col ml-3 mt-2 gap-2 ${!collapsed || (collapsed && showDropdown)?'':'hidden'}`}>
                 {
                     folders.map(folder => (
-                        <div className="flex" onClick={()=>window.open(`/blog?folder=${folder}`, '_self')}> 
+                        <div key={folder} className="flex" onClick={()=>window.open(`/blog?folder=${folder}`, '_self')}> 
                             <FontAwesomeIcon icon={faArrowTurnUp} className="text-blue-400 dark:text-purple-500 mr-1.5 mt-1.5 transform rotate-90 "/> 
                             <div className="cursor-pointer hover:font-medium hover:text-blue-300 hover:dark:text-purple-400">
                                 {folder}
