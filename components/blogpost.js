@@ -17,7 +17,6 @@ export default function BlogPost({path, reset}){
     const { theme } = useTheme()
 
     useEffect(()=>{
-        console.log(reset)
         if (reset!=null){
             reset.refresh()
         }
