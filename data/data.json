@@ -110,11 +110,27 @@
       }
     ],
     "projects":[
+        {
+          "title":"HackAPrompt2",
+          "image":"hackaprompt.png",
+          "tags":["Web", "ReactJS", "NextJS", "Auth0", "OpenAI API", "Firebase", "TailwindCSS"],
+          "description":"A prompt hacking site rapidly prototyped in a week as a commission for LearnPrompting for the VoiceandAI2023 conference. ",
+          "githubLink":"none",
+          "link":"https://hackaprompt.com/"
+      },
+      {
+        "title":"SURJ at UMD",
+        "image":"surj.png",
+        "tags":["Web", "ReactJS", "NextJS", "Firebase", "TailwindCSS"],
+        "description":"Upcoming undergraduate research journal. Wesbite displays past journals, as well as allows for members to upload research papers and vote on ones submitted in the current semster. ",
+        "githubLink":"none",
+        "link":"https://surj-at-umd.vercel.app/"
+    },
       {
           "title":"Pollster",
           "image":"pollster.png",
           "tags":["Web", "ReactJS", "ChakraUI", "Firebase", "PWA"],
-          "description":"A location based polling app built in 36 under hours with Tinu Vanampula and Linkai Wu for MocoHacks2021, won topical prize for Best Overall UI.",
+          "description":"A location based polling app built in under 36 hours with Tinu Vanampula and Linkai Wu for MocoHacks2021, won topical prize for Best Overall UI.",
           "githubLink":"https://github.com/tinuh/pollster",
           "link":"https://pollster.tinu.tech/"
       },

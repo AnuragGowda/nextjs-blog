@@ -88,7 +88,7 @@ export default function HomePage() {
           </div>
         </motion.div>
         <motion.div className="text-gray-500 text-xl mt-8 max-w-4xl" initial={{ opacity:0, y:5 }} animate={{ opacity:1, y:0 }} transition={{ delay:2.1, duration:0.5 }}>
-          A rising Sophmore CS + Math double major at UMD. I enjoy learning about topics related to Web development and Machine Learning. I use this website to document my growth and learning. 
+          A Sophmore CS + Math double major at UMD. I enjoy learning about topics related to Web development and Machine Learning. I use this website to document my growth and learning. 
         </motion.div>
         <motion.div
           initial="hidden"
