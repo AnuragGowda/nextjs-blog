@@ -7,7 +7,7 @@ export default function PortfolioCard({ data }){
     const imgSrc = `/images/${data.image}`
     
     return (
-        <div className="flex flex-col max-w-sm border rounded-md p-4 shadow dark:bg-[#2e2e2e] dark:border-0">
+        <div className="flex flex-col max-w-sm border rounded-md p-4 shadow bg-white dark:bg-[#2e2e2e] dark:border-0">
             <img className="rounded-md mb-3" src={imgSrc}></img>
             <div className="flex flex-wrap mt-1">
                 {data.tags.map(

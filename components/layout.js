@@ -6,9 +6,10 @@ export default function Layout({ children, title }) {
     <>
       <Head>
         <title>{title}</title>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet" />
       </Head>
-      <main className="h-screen">
-      <Navbar/>
+      <main>
+        <Navbar/>
         {children}
       </main>
     </>

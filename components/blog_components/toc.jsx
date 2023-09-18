@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { AiOutlineBars } from "react-icons/ai"
 import { faRefresh } from "@fortawesome/free-solid-svg-icons";
+import { MdRefresh } from 'react-icons/md'
 
 export default function Toc({ setReset }){
 
@@ -47,7 +48,9 @@ export default function Toc({ setReset }){
                 <div className="text-xl font-bold mb-1">
                     Contents
                 </div>
-                <FontAwesomeIcon icon={faRefresh} onClick={()=>{tocbot.refresh()}} className="cursor-pointer mt-2 mr-2 text-blue-400 dark:text-purple-500"/>
+                <div className="my-auto text-2xl cursor-pointer mr-2 text-blue-500 dark:text-purple-500" onClick={()=>{tocbot.refresh()}} >
+                    <MdRefresh />
+                </div>
             </div>
             <div className="toc text-md">
 

@@ -31,9 +31,9 @@ export default function PortfolioPage(){
       }
 
     return (
-        <div className="flex flex-col items-center ml-5 mr-5">
+        <div className="flex flex-col items-center ml-5 mr-5 mt-[10vh]">
             <div className="font-bold text-5xl mt-10">
-                Projects
+                Portfolio
             </div>
             <div className="text-gray-400 mt-5 text-xl max-w-2xl ml-3 mr-3 text-center mb-5">
                 Here's some of the things I've worked on.

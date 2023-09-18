@@ -1,14 +1,14 @@
-import Share from "../../components/share"
-import NextPost from "../../components/nextpost"
+import Share from "../../components/blog_components/share"
+import NextPost from "../../components/blog_components/nextpost"
 import data from "../../data/data.json"
 import Head from "next/head"
-import Toc from "../../components/toc"
-import BlogPost from "../../components/blogpost"
+import Toc from "../../components/blog_components/toc"
+import BlogPost from "../../components/blog_components/blogpost"
 import { faClock, faFolder } from "@fortawesome/free-regular-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import Comments from "../../components/comments"
-import Tags from "../../components/tags"
-import Breadcrumbs from "../../components/breadcrubs"
+import Comments from "../../components/blog_components/comments"
+import Tags from "../../components/blog_components/tags"
+import Breadcrumbs from "../../components/blog_components/breadcrubs"
 import { motion } from 'framer-motion'
 import { useState } from "react"
 
@@ -32,7 +32,7 @@ export default function BlogPage({ blogData }) {
         <meta name="twitter:description" content={blogData.description} />
         <meta name="twitter:image" content={"https://anuraggowda.com"+blogData.img} />
       </Head>
-      <div className="flex h-[fit-content] justify-center mt-2 bg-[#f9fafb] dark:bg-[#1e1e1e] pb-10">
+      <div className="flex h-[fit-content] justify-center mt-2 bg-[#f9fafb] dark:bg-[#1e1e1e] pb-10 mt-[10vh]">
 
         <div className="flex flex-col mt-16 w-[fit-content] border p-3 mx-3 md:p-14 rounded-lg bg-white dark:bg-[#2e2e2e] dark:border-[#2e2e2e]">
           <Breadcrumbs folder={blogData.folder} name={blogData.title} />
