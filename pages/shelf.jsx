@@ -1,13 +1,11 @@
 import data from "../data/data.json"
-import BlogCard from "../components/blogcard"
+import BlogCard from "../components/blog_components/blogcard"
 import { motion } from "framer-motion"
-import TagFilterCard from "../components/tagfilter"
-import FolderFilterCard from "../components/folderfliter"
-import Search from "../components/searchfilter"
+import TagFilterCard from "../components/blog_page/tagfilter"
+import FolderFilterCard from "../components/blog_page/folderfliter"
+import Search from "../components/blog_page/searchfilter"
 import { useSearchParams } from 'next/navigation'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faFolder } from "@fortawesome/free-regular-svg-icons"
-import { faTag, faXmark } from "@fortawesome/free-solid-svg-icons"
+import { FaRegFolder, FaTag, FaXmark } from "react-icons/fa6"
 import { useState } from "react"
 
 function splitArr(array) {
@@ -63,9 +61,9 @@ export default function BlogPage(){
     return (
       <>
         {showLoader && <Loading />}
-        <div className="flex flex-col items-center bg-[#f9fafb] dark:bg-[#1e1e1e] pb-5">
+        <div className="flex flex-col items-center bg-[#f9fafb] dark:bg-[#1e1e1e] pb-5 mt-32">
             <div className="font-bold text-5xl mt-10">
-                Blog
+                Shelf
             </div>
             {
             (!sp.has("folder") && !sp.has("tag")) && 
@@ -75,18 +73,26 @@ export default function BlogPage(){
             }
             {
               sp.has("folder") &&
-              <div className="text-blue-500 dark:text-purple-500 mt-5 text-xl max-w-2xl ml-3 mr-3 text-center">
-                  <FontAwesomeIcon icon={faFolder} className="mr-2" />
+              <div className="flex items-center text-blue-500 dark:text-purple-500 mt-5 text-xl max-w-2xl ml-3 mr-3 text-center">
+                  <div className="mr-2">
+                    <FaRegFolder />
+                  </div>
                   {sp.get("folder")}
-                  <FontAwesomeIcon icon={faXmark} className="ml-2 text-gray-400 cursor-pointer" onClick={()=>window.open("/blog", "_self")}/>
+                  <div className="ml-2 text-gray-400 cursor-pointer" onClick={()=>window.open("/blog", "_self")}>
+                    <FaXmark />
+                  </div>
               </div>
             }
             {
               !sp.has("folder") && sp.has("tag") &&
-              <div className="text-blue-500 dark:text-purple-500 mt-5 text-xl max-w-2xl ml-3 mr-3 text-center">
-                  <FontAwesomeIcon icon={faTag} className="mr-2" />
+              <div className="flex items-center text-blue-500 dark:text-purple-500 mt-5 text-xl max-w-2xl ml-3 mr-3 text-center">
+                <div className="text-base mr-2">
+                    <FaTag />
+                  </div>
                   {sp.get("tag")}
-                  <FontAwesomeIcon icon={faXmark} className="ml-2 text-gray-400 cursor-pointer" onClick={()=>window.open("/blog", "_self")}/>
+                  <div className="ml-2 text-gray-400 cursor-pointer" onClick={()=>window.open("/blog", "_self")}>
+                    <FaXmark />
+                  </div>
               </div>
             }
 
@@ -105,7 +111,7 @@ export default function BlogPage(){
                   className="hidden sm:flex grid grid-cols-2 divide-x mt-10 gap-5"
               >
                 {
-                  blogs.length == 0? <div className=" flex my-auto  mx-10 text-gray-400 text-2xl font-medium">No blogs matching filter </div> :
+                  blogs.length == 0? <div className=" flex my-auto  mx-10 text-gray-400 text-2xl font-medium">No posts matching filter </div> :
               
                   <div className="flex gap-7">
                     <div className="flex flex-col gap-7">

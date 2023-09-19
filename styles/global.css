@@ -4,6 +4,14 @@
 
 @layer base{
     body {
-        @apply dark:bg-[#1e1e1e] bg-white
+        @apply dark:bg-[#1e1e1e] bg-[#f9fafb]
+    }
+}
+
+@layer base {
+    html {
+        font-family: 'Poppins';
+        --scroll-behavior: smooth!important;
+        scroll-behavior: smooth!important;
     }
 }

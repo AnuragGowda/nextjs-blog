@@ -1,6 +1,6 @@
 import { faArrowLeft, faArrowRight, faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import data from "../data/data.json"
+import data from "../../data/data.json"
 
 export default function NextPost({prev, blogData}){
 

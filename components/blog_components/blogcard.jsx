@@ -1,6 +1,4 @@
-import { faClock } from "@fortawesome/free-regular-svg-icons"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faFolder } from "@fortawesome/free-regular-svg-icons"
+import {FaRegClock, FaFolder} from 'react-icons/fa6'
 import { motion } from 'framer-motion'
 import Link from "next/link"
 import SmallTags from "./smalltag"
@@ -32,14 +30,17 @@ export default function BlogCard({ data }){
                     <SmallTags tags={data.tags} />
                 </div>
                 <div className="flex justify-between mt-3 ml-2 mr-4">
-                    <div className="text-sm flex text-blue-400 font-medium dark:text-purple-500">
-                        <FontAwesomeIcon icon={faFolder} className="mt-0.5" />
+                    <div className="items-center text-sm flex text-blue-400 font-medium dark:text-purple-500">
+                        <FaFolder />
                         <div className="ml-1 cursor-pointer">
                             {data.folder}
                         </div>
                     </div>
-                    <div className="text-sm text-gray-600 font-medium dark:text-gray-400">
-                        <FontAwesomeIcon icon={faClock} /> {data.read} min
+                    <div className="flex items-center text-sm text-gray-600 font-medium dark:text-gray-400">
+                        <div className="mr-1">
+                            <FaRegClock /> 
+                        </div>
+                        {data.read} min
                     </div> 
                 </div>
             </div>
