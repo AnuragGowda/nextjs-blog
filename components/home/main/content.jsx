@@ -44,7 +44,7 @@ export default function MainContent(){
                     />
                 </h2>
                 <p className="text-sm sm:text-base text-slate-400 max-w-xl mx-auto">
-                    I'm a Sophmore CS + Math double major at UMD. I enjoy learning about topics related to Web development and Machine Learning. 
+                    I'm a Junior CS + Math double major at UMD. I enjoy learning about topics related to Web development and Machine Learning. 
                 </p>
                 <div className="pt-4 flex space-x-3 md:space-x-10 justify-center lg:justify-normal">
                     <button className="flex rounded-xl bg-slate-500 hover:bg-slate-600 text-white px-4 py-3 md:px-8 md:py-5">
