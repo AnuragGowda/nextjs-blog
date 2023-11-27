@@ -55,7 +55,7 @@ export default function About(){
                         <Image
                             className="rounded-xl border-2 mt-4 cursor-pointer sm:w-4/5 mx-auto"
                             src={HackaPrompt}
-                            onClick={()=>window.open('https://hackaprompt.com')}
+                            onClick={()=>window.open('https://www.hackaprompt.com/')}
                         />
                         <Link href="/portfolio" className="text-center mx-auto mt-6 rounded p-2 bg-blue-400 hover:bg-blue-500 text-white min-w-[180px] ">
                             View all Projects
